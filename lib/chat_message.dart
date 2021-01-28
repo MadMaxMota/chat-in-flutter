@@ -30,6 +30,7 @@ class ChatMessage extends StatelessWidget {
                       )
                     : Text(
                         data['text'],
+                        textAlign: mine ? TextAlign.end : TextAlign.start,
                         style: TextStyle(fontSize: 16),
                       ),
                 Text(
@@ -42,7 +43,7 @@ class ChatMessage extends StatelessWidget {
               ],
             ),
           ),
-          !mine
+          mine
               ? Padding(
                   padding: const EdgeInsets.only(left: 10.0),
                   child: CircleAvatar(
